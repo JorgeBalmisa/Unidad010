@@ -15,10 +15,13 @@ public class Cola<T> {
 		tabla.add(nuevo);
 	}
 	public T sacar() {
-		T devolver = null;
-		devolver = tabla.get(0);
-		tabla.remove(0);
-		
-		return devolver; 
+		if (tabla.isEmpty()) {
+			return null;
+		}
+		return tabla.remove(0);
+	}
+	
+	public ArrayList <T> getCola() {
+		return tabla;
 	}
 }
